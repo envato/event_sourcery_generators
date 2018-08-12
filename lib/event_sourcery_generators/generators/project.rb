@@ -52,6 +52,10 @@ module EventSourceryGenerators
         template('app.json.tt', "#{project_name}/app.json")
       end
 
+      def setup_app_name_file
+        template('event_sourcery_app_name.tt', "#{project_name}/event_sourcery_app_name")
+      end
+
       def run_setup_script
         return if options[:skip_setup]
 
